@@ -53,7 +53,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="linux," />
 
 
 
@@ -69,13 +69,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sneeze">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="iptables是netfilter项目的一部分，也常代指内核级防火墙。 基本概念  iptables 可以检测、修改、转发、重定向和丢弃 IPv4 数据包。过滤 IPv4 数据包的代码已经内置于内核中，并且按照不同的目的被组织成 表 的集合。表 由一组预先定义的 链 组成，链 包含遍历顺序规则。每一条规则包含一个谓词的潜在匹配和相应的动作（称为 目标），如果谓词为真，该动作会被执行。也就是说条件">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈iptables">
+<meta property="og:url" content="http://yoursite.com/2017/09/27/浅谈iptables/index.html">
 <meta property="og:site_name" content="Sneeze">
+<meta property="og:description" content="iptables是netfilter项目的一部分，也常代指内核级防火墙。 基本概念  iptables 可以检测、修改、转发、重定向和丢弃 IPv4 数据包。过滤 IPv4 数据包的代码已经内置于内核中，并且按照不同的目的被组织成 表 的集合。表 由一组预先定义的 链 组成，链 包含遍历顺序规则。每一条规则包含一个谓词的潜在匹配和相应的动作（称为 目标），如果谓词为真，该动作会被执行。也就是说条件">
 <meta property="og:locale" content="chinese">
+<meta property="og:image" content="http://yoursite.com/2017/09/27/浅谈iptables/image0001.png">
+<meta property="og:updated_time" content="2017-09-27T16:25:24.079Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sneeze">
+<meta name="twitter:title" content="浅谈iptables">
+<meta name="twitter:description" content="iptables是netfilter项目的一部分，也常代指内核级防火墙。 基本概念  iptables 可以检测、修改、转发、重定向和丢弃 IPv4 数据包。过滤 IPv4 数据包的代码已经内置于内核中，并且按照不同的目的被组织成 表 的集合。表 由一组预先定义的 链 组成，链 包含遍历顺序规则。每一条规则包含一个谓词的潜在匹配和相应的动作（称为 目标），如果谓词为真，该动作会被执行。也就是说条件">
+<meta name="twitter:image" content="http://yoursite.com/2017/09/27/浅谈iptables/image0001.png">
 
 
 
@@ -105,13 +112,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/27/浅谈iptables/"/>
 
 
 
 
 
-  <title>Sneeze</title>
+  <title>浅谈iptables | Sneeze</title>
   
 
 
@@ -130,8 +137,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -204,144 +210,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/30/用python处理未正确url解码的文件名/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="fokia">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sneeze">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/30/用python处理未正确url解码的文件名/" itemprop="url">用python处理未正确url解码的文件名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-30T00:29:46+08:00">
-                2017-09-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>最近在追美剧shameless，用aria2从百度云下载的视频，无论名称是否包含中文都未正确解码，深度影院更新前的侧边文件目录看起来还好。更新后的侧边目录实在是太糟糕了，大量相似的文件名看的眼睛都花了。<br>看了一下应该是未正确解码url试着在线url解码了下，果然如此。接着就好办了，查了下python相关api，都说人生苦短，我用python，果然很简单。<br>用urllib库，一行代码即实现了url解码。</p>
-<pre><code>urllib.parse.unquote(name)
-</code></pre><p>os库里的重命名代码亦是一行，这样这个程序就很简单了，从系统目录获得所有文件名称集合，遍历这个集合，对其中的每一个文件进行url解码重命名即可。</p>
-<p>很好，很方便。</p>
-<pre><code>#!/usr/bin/python3
-import urllib.parse
-import os, sys
-
-names = os.listdir(os.getcwd())
-
-for name in names:
-    os.rename(name, urllib.parse.unquote(name))
-
-print (&quot;重命名成功。&quot;)
-
-print (&quot;目录为: %s&quot; %os.listdir(os.getcwd()))
-</code></pre>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -371,9 +242,7 @@ print (&quot;目录为: %s&quot; %os.listdir(os.getcwd()))
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/27/浅谈iptables/" itemprop="url">浅谈iptables</a></h1>
+          <h1 class="post-title" itemprop="name headline">浅谈iptables</h1>
         
 
         <div class="post-meta">
@@ -423,9 +292,7 @@ print (&quot;目录为: %s&quot; %os.listdir(os.getcwd()))
       
 
       
-        
-          
-            <p>iptables是netfilter项目的一部分，也常代指内核级防火墙。</p>
+        <p>iptables是netfilter项目的一部分，也常代指内核级防火墙。</p>
 <p>基本概念</p>
 <blockquote>
 <p>iptables 可以检测、修改、转发、重定向和丢弃 IPv4 数据包。过滤 IPv4 数据包的代码已经内置于内核中，并且按照不同的目的被组织成 表 的集合。表 由一组预先定义的 链 组成，链 包含遍历顺序规则。每一条规则包含一个谓词的潜在匹配和相应的动作（称为 目标），如果谓词为真，该动作会被执行。也就是说条件匹配。iptables 是用户工具，允许用户使用 链 和 规则。很多新手面对复杂的 linux IP 路由时总是感到气馁，但是，实际上最常用的一些应用案例（NAT 或者基本的网络防火墙）并不是很复杂。</p>
@@ -443,8 +310,6 @@ print (&quot;目录为: %s&quot; %os.listdir(os.getcwd()))
 <p>这样看来重定向功能是不允许配置在postrouting链路中。</p>
 <p>根据上边那张图，很容易可以想到，如果我们这台机器充当路由的角色时，规则就应该配置在nat表的prerouting链中，很容易即可实现透明代理功能。</p>
 
-          
-        
       
     </div>
     
@@ -459,135 +324,40 @@ print (&quot;目录为: %s&quot; %os.listdir(os.getcwd()))
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/26/World/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="fokia">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sneeze">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/26/World/" itemprop="url">Hello World!</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-26T13:35:21+08:00">
-                2017-09-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/linux/" rel="tag"># linux</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>咳咳，第一篇狗屁博客，很久以前就想写博客，或许很久以前就写过博客，如果之前那些狗屁文字能算作博客的话……那这样说来，这还算不上博客。</p>
-<p>总之写这个东西，有两个目的，一是练习打字，而是记录笔记。毕竟看的东西越多，忘掉的东西越多。就这些吧。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/26/World/" rel="next" title="Hello World!">
+                <i class="fa fa-chevron-left"></i> Hello World!
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/30/用python处理未正确url解码的文件名/" rel="prev" title="用python处理未正确url解码的文件名">
+                用python处理未正确url解码的文件名 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -597,10 +367,11 @@ print (&quot;目录为: %s&quot; %os.listdir(os.getcwd()))
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -608,6 +379,10 @@ print (&quot;目录为: %s&quot; %os.listdir(os.getcwd()))
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
