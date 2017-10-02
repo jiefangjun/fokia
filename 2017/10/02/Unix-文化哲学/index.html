@@ -53,7 +53,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python," />
+  <meta name="keywords" content="Unix," />
 
 
 
@@ -69,18 +69,18 @@
 
 
 
-<meta name="description" content="最近在追美剧shameless，用aria2从百度云下载的视频，无论名称是否包含中文都未正确解码，深度影院更新前的侧边文件目录看起来还好。更新后的侧边目录实在是太糟糕了，大量相似的文件名看的眼睛都花了。看了一下应该是未正确解码url试着在线url解码了下，果然如此。接着就好办了，查了下python相关api，都说人生苦短，我用python，果然很简单。用urllib库，一行代码即实现了url解码。">
-<meta name="keywords" content="python">
+<meta name="description" content="《Linux就是这个范儿》读书笔记 Rob Pike，最伟大的C语言大师之一，在Notes on Programming in C中则从编程的角度对Unix文化进行了阐释，这也反应了一些侧面: 原则1：你无法判定程序会在什么地方耗费运行时间。瓶颈经常出现在想不到的地方，所以别急于胡乱地找地方改代码，除非你已经证明那儿就是瓶颈所在。 原则2：估量，在你没对代码进行估量，特别是没找到最耗时的那部分之前">
+<meta name="keywords" content="Unix">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用python处理未正确url解码的文件名">
-<meta property="og:url" content="http://yoursite.com/2017/09/30/用python处理未正确url解码的文件名/index.html">
+<meta property="og:title" content="Unix 文化哲学">
+<meta property="og:url" content="http://yoursite.com/2017/10/02/Unix-文化哲学/index.html">
 <meta property="og:site_name" content="Sneeze">
-<meta property="og:description" content="最近在追美剧shameless，用aria2从百度云下载的视频，无论名称是否包含中文都未正确解码，深度影院更新前的侧边文件目录看起来还好。更新后的侧边目录实在是太糟糕了，大量相似的文件名看的眼睛都花了。看了一下应该是未正确解码url试着在线url解码了下，果然如此。接着就好办了，查了下python相关api，都说人生苦短，我用python，果然很简单。用urllib库，一行代码即实现了url解码。">
+<meta property="og:description" content="《Linux就是这个范儿》读书笔记 Rob Pike，最伟大的C语言大师之一，在Notes on Programming in C中则从编程的角度对Unix文化进行了阐释，这也反应了一些侧面: 原则1：你无法判定程序会在什么地方耗费运行时间。瓶颈经常出现在想不到的地方，所以别急于胡乱地找地方改代码，除非你已经证明那儿就是瓶颈所在。 原则2：估量，在你没对代码进行估量，特别是没找到最耗时的那部分之前">
 <meta property="og:locale" content="chinese">
-<meta property="og:updated_time" content="2017-09-29T16:52:59.993Z">
+<meta property="og:updated_time" content="2017-10-02T15:55:45.440Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用python处理未正确url解码的文件名">
-<meta name="twitter:description" content="最近在追美剧shameless，用aria2从百度云下载的视频，无论名称是否包含中文都未正确解码，深度影院更新前的侧边文件目录看起来还好。更新后的侧边目录实在是太糟糕了，大量相似的文件名看的眼睛都花了。看了一下应该是未正确解码url试着在线url解码了下，果然如此。接着就好办了，查了下python相关api，都说人生苦短，我用python，果然很简单。用urllib库，一行代码即实现了url解码。">
+<meta name="twitter:title" content="Unix 文化哲学">
+<meta name="twitter:description" content="《Linux就是这个范儿》读书笔记 Rob Pike，最伟大的C语言大师之一，在Notes on Programming in C中则从编程的角度对Unix文化进行了阐释，这也反应了一些侧面: 原则1：你无法判定程序会在什么地方耗费运行时间。瓶颈经常出现在想不到的地方，所以别急于胡乱地找地方改代码，除非你已经证明那儿就是瓶颈所在。 原则2：估量，在你没对代码进行估量，特别是没找到最耗时的那部分之前">
 
 
 
@@ -110,13 +110,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/30/用python处理未正确url解码的文件名/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/02/Unix-文化哲学/"/>
 
 
 
 
 
-  <title>用python处理未正确url解码的文件名 | Sneeze</title>
+  <title>Unix 文化哲学 | Sneeze</title>
   
 
 
@@ -223,7 +223,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/30/用python处理未正确url解码的文件名/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/02/Unix-文化哲学/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fokia">
@@ -240,7 +240,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用python处理未正确url解码的文件名</h1>
+          <h1 class="post-title" itemprop="name headline">Unix 文化哲学</h1>
         
 
         <div class="post-meta">
@@ -252,8 +252,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-30T00:29:46+08:00">
-                2017-09-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-02T23:39:56+08:00">
+                2017-10-02
               </time>
             
 
@@ -290,23 +290,16 @@
       
 
       
-        <p>最近在追美剧shameless，用aria2从百度云下载的视频，无论名称是否包含中文都未正确解码，深度影院更新前的侧边文件目录看起来还好。更新后的侧边目录实在是太糟糕了，大量相似的文件名看的眼睛都花了。<br>看了一下应该是未正确解码url试着在线url解码了下，果然如此。接着就好办了，查了下python相关api，都说人生苦短，我用python，果然很简单。<br>用urllib库，一行代码即实现了url解码。</p>
-<pre><code>urllib.parse.unquote(name)
-</code></pre><p>os库里的重命名代码亦是一行，这样这个程序就很简单了，从系统目录获得所有文件名称集合，遍历这个集合，对其中的每一个文件进行url解码重命名即可。</p>
-<p>很好，很方便。</p>
-<pre><code>#!/usr/bin/python3
-import urllib.parse
-import os, sys
+        <p>《Linux就是这个范儿》读书笔记</p>
+<p>Rob Pike，最伟大的C语言大师之一，在Notes on Programming in C中则从编程的角度对Unix文化进行了阐释，这也反应了一些侧面:</p>
+<p>原则1：你无法判定程序会在什么地方耗费运行时间。瓶颈经常出现在想不到的地方，所以别急于胡乱地找地方改代码，除非你已经证明那儿就是瓶颈所在。</p>
+<p>原则2：估量，在你没对代码进行估量，特别是没找到最耗时的那部分之前，别去优化速度。</p>
+<p>原则3：花哨的算法在n很小时通常很慢，而n通常很小。花哨算法的常数复杂度很大。除非你确定n很大，否则不要用花哨算法。即使n很大，也要优先考虑原则2。</p>
+<p>原则4：花哨的算法比简单的算法更容易出bug、更难实现。尽量使用简单的算法配合简单的数据结构。</p>
+<p>原则5：数据压倒一切。如果已经选择了正确的数据结构并把一切都组织的井井有条，正确的算法也就不言自明。<strong>编程的核心是数据结构，而不是算法。
+</strong></p>
+<p>原则6：没有原则6。</p>
 
-names = os.listdir(os.getcwd())
-
-for name in names:
-    os.rename(name, urllib.parse.unquote(name))
-
-print (&quot;重命名成功。&quot;)
-
-print (&quot;目录为: %s&quot; %os.listdir(os.getcwd()))
-</code></pre>
       
     </div>
     
@@ -323,7 +316,7 @@ print (&quot;目录为: %s&quot; %os.listdir(os.getcwd()))
       
         <div class="post-tags">
           
-            <a href="/tags/python/" rel="tag"># python</a>
+            <a href="/tags/Unix/" rel="tag"># Unix</a>
           
         </div>
       
@@ -336,8 +329,8 @@ print (&quot;目录为: %s&quot; %os.listdir(os.getcwd()))
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/27/浅谈iptables/" rel="next" title="浅谈iptables">
-                <i class="fa fa-chevron-left"></i> 浅谈iptables
+              <a href="/2017/09/30/给濒死的老电脑装上lubuntu/" rel="next" title="给濒死的老电脑装上lubuntu">
+                <i class="fa fa-chevron-left"></i> 给濒死的老电脑装上lubuntu
               </a>
             
           </div>
@@ -345,10 +338,6 @@ print (&quot;目录为: %s&quot; %os.listdir(os.getcwd()))
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/30/给濒死的老电脑装上lubuntu/" rel="prev" title="给濒死的老电脑装上lubuntu">
-                给濒死的老电脑装上lubuntu <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
