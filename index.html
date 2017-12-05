@@ -219,6 +219,132 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/05/yy-MM-dd与yy-mm-dd/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fokia">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sneeze">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/05/yy-MM-dd与yy-mm-dd/" itemprop="url">yy-MM-dd与yy-mm-dd</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-05T17:49:25+08:00">
+                2017-12-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天在写一道Java题目时要求格式化时间，老师示例代码时yy-MM-dd,我在想为什么不是mm。<br>接下来，自己写的时候，特意换了下mm，结果输出的是分钟数。</p>
+<ul>
+<li><a href="https://www.zhihu.com/question/23730083" target="_blank" rel="external">相关链接</a></li>
+</ul>
+<blockquote>
+<p>yyyy-MM-dd HH:mm:ss 年-月-日 时:分:秒大写是为了区分“月”与“分”顺便说下HH为什么大写，是为了区分12小时制与24小时制。小写的h是12小时制，大写的H是24小时制。书写格式和语言规定有关，上述写法是Windows系统中的我们常见的写法，包括日期设置于办公软件在内。在其他语言中有类似的但使用符号或格式不同的写法。有的时候我们会看到这样的格式：yyyy-M-d H:m:smm与m等，它们的区别为是否有前导零：H,m,s表示非零开始，HH,mm,ss表示从零开始。比如凌晨1点2分，HH:mm显示为01:02，H:m显示为1:2。以2014年1月1日凌晨1点1分1秒（当天是星期三）为例子介绍一下其他的：yyyy/yyy/yy/y 显示为 2014/2014/14/4（3个y与4个y是一样的，为了便于理解多写成4个y）MMMM/MMM/MM/M 显示为 一月/一月/01/1（4个M显示全称，3个M显示缩写，不过中文显示是一样的，英文就是January和Jan）dddd/ddd/dd/d 显示为 星期三/周三(有的语言显示为“三”)/01/1（在英文中同M一样，4个d是全称，3个是简称；dddd/ddd表示星期几，dd/d表示几号）HH/H/hh/h 显示为 01/1/01 AM/1 AM剩下的mm/m/ss/s只是前导零的问题了。yyyy/M/d/dddd H:mm:ss 就是 2014年1月1日星期三 1:01:01</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/10/记一次在docker中配置nginx/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -314,6 +440,9 @@
 autoindex_exact_size on;
 autoindex_localtime on;
 </code></pre><p>重启容器访问主机，即可看到一个简陋的http文件服务器，当前目录里的文件已经列在其中。</p>
+<p>相关链接</p>
+<p><a href="http://www.runoob.com/docker/docker-install-nginx.html" target="_blank" rel="external">Docker 安装 Nginx</a> </p>
+<p><a href="http://gdocker.com/386/docker-100/" target="_blank" rel="external">在DOCKER中访问主机目录时拒绝权限</a> </p>
 
           
         
@@ -1375,7 +1504,7 @@ print (&quot;目录为: %s&quot; %os.listdir(os.getcwd()))
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
@@ -1388,7 +1517,7 @@ print (&quot;目录为: %s&quot; %os.listdir(os.getcwd()))
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">Tags</span>
               
             </div>
