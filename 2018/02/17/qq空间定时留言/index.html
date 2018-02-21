@@ -53,7 +53,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Python Linux," />
 
 
 
@@ -69,14 +69,20 @@
 
 
 
+<meta name="description" content="为什么要做这样的事？都是为了女人。 其次就是闲的蛋疼。 思路很简单，空间留言抓包，利用Python的requests库自定义评论内容发包即可实现评论。配合Linux crontab定时任务即可实现定时评论。 用手机上的Packet Capture抓qq空间网页版留言动作的数据包，这个工具主要好用在可以分应用抓包，另外同过自建vpn的方式实现免Root抓包也是他的一大特色。虽然Root权限对于搞基的">
+<meta name="keywords" content="Python Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="qq空间定时留言">
+<meta property="og:title" content="QQ空间定时留言">
 <meta property="og:url" content="http://yoursite.com/2018/02/17/qq空间定时留言/index.html">
 <meta property="og:site_name" content="Sneeze">
+<meta property="og:description" content="为什么要做这样的事？都是为了女人。 其次就是闲的蛋疼。 思路很简单，空间留言抓包，利用Python的requests库自定义评论内容发包即可实现评论。配合Linux crontab定时任务即可实现定时评论。 用手机上的Packet Capture抓qq空间网页版留言动作的数据包，这个工具主要好用在可以分应用抓包，另外同过自建vpn的方式实现免Root抓包也是他的一大特色。虽然Root权限对于搞基的">
 <meta property="og:locale" content="chinese">
-<meta property="og:updated_time" content="2018-02-17T02:55:06.666Z">
+<meta property="og:image" content="http://owxb9rdm8.bkt.clouddn.com/static/images/static/qqpcap.png?imageView2/2/w/600">
+<meta property="og:updated_time" content="2018-02-21T09:07:33.923Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="qq空间定时留言">
+<meta name="twitter:title" content="QQ空间定时留言">
+<meta name="twitter:description" content="为什么要做这样的事？都是为了女人。 其次就是闲的蛋疼。 思路很简单，空间留言抓包，利用Python的requests库自定义评论内容发包即可实现评论。配合Linux crontab定时任务即可实现定时评论。 用手机上的Packet Capture抓qq空间网页版留言动作的数据包，这个工具主要好用在可以分应用抓包，另外同过自建vpn的方式实现免Root抓包也是他的一大特色。虽然Root权限对于搞基的">
+<meta name="twitter:image" content="http://owxb9rdm8.bkt.clouddn.com/static/images/static/qqpcap.png?imageView2/2/w/600">
 
 
 
@@ -112,7 +118,7 @@
 
 
 
-  <title>qq空间定时留言 | Sneeze</title>
+  <title>QQ空间定时留言 | Sneeze</title>
   
 
 
@@ -236,7 +242,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">qq空间定时留言</h1>
+          <h1 class="post-title" itemprop="name headline">QQ空间定时留言</h1>
         
 
         <div class="post-meta">
@@ -286,7 +292,68 @@
       
 
       
-        
+        <p>为什么要做这样的事？都是为了女人。</p>
+<p>其次就是闲的蛋疼。</p>
+<p>思路很简单，空间留言抓包，利用Python的requests库自定义评论内容发包即可实现评论。配合Linux crontab定时任务即可实现定时评论。</p>
+<p>用手机上的Packet Capture抓qq空间网页版留言动作的数据包，这个工具主要好用在可以分应用抓包，另外同过自建vpn的方式实现免Root抓包也是他的一大特色。虽然Root权限对于搞基的大部分人来说都不算什么。</p>
+<p>除此之外，通过安装证书的方式可以解密https数据包。不过安卓7.0以上的版本，对系统证书和用户证书的区分更严格了，导致在抓https的数据包时，会一直弹出警告窗口。暂不影响使用，按下不表，网上也有一些途径。</p>
+<p>把第一步抓到的包用wireshark打开，进一步分析。</p>
+<img title="qqpcap" alt="qqpcap" class="class1 class2" src="http://owxb9rdm8.bkt.clouddn.com/static/images/static/qqpcap.png?imageView2/2/w/600">
+<p>典型的POST方法，其中有两个url参数。分别为g_tk和qzonetoken。以及一个url编码的表单数据，一目了然。</p>
+<p>重点便可放在构造请求url上。js一塌糊涂所以选择上网上找前人的经验。很幸运</p>
+<pre><code>hashes = 5381
+for letter in cookie[&apos;p_skey&apos;]:
+    hashes += (hashes &lt;&lt; 5) + ord(letter)
+g_tk = hashes &amp; 0x7fffffff
+</code></pre><p>g_tk是通过登录成功后的cookie来算的。而qzonetoken可以从登录成功的网页源码中可以直接找到。</p>
+<p>重点又到了登录上来。而登录过程的js加密更为复杂，网上现有的qqlib库也有很长一段时间没有更新了，最后选择Selenium模拟登录。</p>
+<p>网上大多教程是Selenium配合Phantomjs，实际使用过程中发现selenium放弃了对Phantomjs的支持，遂选择Chrome进行开发调试，最后部署至服务器时添加headless Options即可。</p>
+<p>由于选择的是移动版QQ空间，所以连UA也一并模拟了。实际上看来并不需要，电脑版的浏览器也可以直接打开移动版页面。</p>
+<pre><code>options = webdriver.ChromeOptions()
+#设置中文
+options.add_argument(&apos;lang=zh_CN.UTF-8&apos;)
+#自定义ua
+useragent = &apos;Mozilla/5.0 (Linux; Android 7.1.2; Redmi 4 Prime Build/NJH47F; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/60.0.3112.78 Mobile Safari/537.36url)&apos;
+options.add_argument(useragent)
+#配置headless chrome
+options.add_argument(&apos;headless&apos;)
+#配置options
+driver = webdriver.Chrome(chrome_options=options)
+</code></pre><p>剩下便简单了，找到文本框输入账号密码，回车登录即可。</p>
+<p>需要注意的是，频繁的登录会触发划动验证码，这也是我放置在服务器上的脚本执行失败报一下错误的原因。</p>
+<pre><code>Traceback (most recent call last):
+File &quot;/home/ali/qzone/newhello.py&quot;, line 90, in &lt;module&gt;
+cookies, g_tk, qzonetoken = login()
+File &quot;/home/ali/qzone/newhello.py&quot;, line 46, in login
+for letter in cookie[&apos;p_skey&apos;]:
+KeyError: &apos;p_skey&apos;
+</code></pre><p>初步解决措施是把登录成功后的Cookie以及根据Cookie得到的g_tk和qzonetoken存入一个元组中，同过json模块将其保存至硬盘。</p>
+<pre><code>result = (cookie, g_tk, qzonetoken)
+with open(&apos;data.json&apos;, &apos;w&apos;) as f:
+json.dump(result, f)
+</code></pre><p>在下次运行时，将其再次导入至程序中。</p>
+<pre><code>try:
+    with open(&apos;data.json&apos;, &apos;r&apos;) as f:
+        data = json.load(f)
+    cookies = data[0]
+    g_tk = data[1]
+    qzonetoken = data[2]
+except IOError:
+    cookies, g_tk, qzonetoken = login()
+</code></pre><p>事实上程序也是这么工作的。可毕竟人算不如天算，由于服务器ip对于常用的本地登录ip不同，所以也是很大几率会触发异常登录，弹出划动验证窗口。</p>
+<p>本想直接做到底，顺带着把划动验证码给解决了，可是对Selenium还不太熟悉，加上对前端知识也不是太熟，导致难度略大。</p>
+<p>最后灵机一动，通过ssh 代理的方式，来实现服务器ip代理访问QQ空间，相当于人肉解决验证问题。应该能顶一段时间。</p>
+<p>不试不知道，又发现一个问题，可能是我多次触发验证又未解决，我在多次验证成功后，登录依然不能成功，故又尝试登录了QQ空间电脑版网页，之后再次访问移动端登录成功。</p>
+<p>看来选择的移动端网页并不是百利而无一害。</p>
+<p>滑动验证码留着以后解决。</p>
+<p>定时任务很简单。需要注意的是我使用的是virtualenv，需要首先加载虚拟指定环境，另外crontab里的路径皆为绝对路径。</p>
+<p>  00 00 <em> </em> * /home/ali/qzone/py3/bin/python /home/ali/qzone/newhello.py &gt;&gt; /home/ali/qzlog.txt 2&gt;&amp;1</p>
+<p>最后完整代码附上</p>
+<p><a href="https://gist.github.com/jiefangjun/a680b8d9c932911247d91730323500ce" target="_blank" rel="external">https://gist.github.com/jiefangjun/a680b8d9c932911247d91730323500ce</a></p>
+<p>参考链接：</p>
+<p><a href="http://selenium-python.readthedocs.io/index.html" target="_blank" rel="external">Selenium文档</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/27604277" target="_blank" rel="external">用python爬取qq好友十万条说说并简单进行数据分析</a></p>
+
       
     </div>
     
@@ -300,6 +367,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python-Linux/" rel="tag"># Python Linux</a>
+          
+        </div>
       
 
       
@@ -398,7 +471,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">tags</span>
               
             </div>
