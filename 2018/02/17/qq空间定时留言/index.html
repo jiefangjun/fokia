@@ -77,12 +77,12 @@
 <meta property="og:site_name" content="Sneeze">
 <meta property="og:description" content="为什么要做这样的事？都是为了女人。 其次就是闲的蛋疼。 思路很简单，空间留言抓包，利用Python的requests库自定义评论内容发包即可实现评论。配合Linux crontab定时任务即可实现定时评论。 用手机上的Packet Capture抓qq空间网页版留言动作的数据包，这个工具主要好用在可以分应用抓包，另外同过自建vpn的方式实现免Root抓包也是他的一大特色。虽然Root权限对于搞基的">
 <meta property="og:locale" content="chinese">
-<meta property="og:image" content="http://owxb9rdm8.bkt.clouddn.com/static/images/static/qqpcap.png?imageView2/2/w/600">
-<meta property="og:updated_time" content="2018-02-21T09:16:01.905Z">
+<meta property="og:image" content="http://owxb9rdm8.bkt.clouddn.com/static/images/static/images/qqpcap.png?imageView2/2/w/600">
+<meta property="og:updated_time" content="2018-02-21T09:37:56.970Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QQ空间定时留言">
 <meta name="twitter:description" content="为什么要做这样的事？都是为了女人。 其次就是闲的蛋疼。 思路很简单，空间留言抓包，利用Python的requests库自定义评论内容发包即可实现评论。配合Linux crontab定时任务即可实现定时评论。 用手机上的Packet Capture抓qq空间网页版留言动作的数据包，这个工具主要好用在可以分应用抓包，另外同过自建vpn的方式实现免Root抓包也是他的一大特色。虽然Root权限对于搞基的">
-<meta name="twitter:image" content="http://owxb9rdm8.bkt.clouddn.com/static/images/static/qqpcap.png?imageView2/2/w/600">
+<meta name="twitter:image" content="http://owxb9rdm8.bkt.clouddn.com/static/images/static/images/qqpcap.png?imageView2/2/w/600">
 
 
 
@@ -178,7 +178,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -188,7 +188,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -252,7 +252,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-17T10:55:06+08:00">
                 2018-02-17
@@ -298,7 +298,7 @@
 <p>用手机上的Packet Capture抓qq空间网页版留言动作的数据包，这个工具主要好用在可以分应用抓包，另外同过自建vpn的方式实现免Root抓包也是他的一大特色。虽然Root权限对于搞基的大部分人来说都不算什么。</p>
 <p>除此之外，通过安装证书的方式可以解密https数据包。不过安卓7.0以上的版本，对系统证书和用户证书的区分更严格了，导致在抓https的数据包时，会一直弹出警告窗口。暂不影响使用，按下不表，网上也有一些途径。</p>
 <p>把第一步抓到的包用wireshark打开，进一步分析。</p>
-<img title="qqpcap" alt="qqpcap" class="class1 class2" src="http://owxb9rdm8.bkt.clouddn.com/static/images/static/qqpcap.png?imageView2/2/w/600">
+<img title="qqpcap" alt="qqpcap" class="class1 class2" src="http://owxb9rdm8.bkt.clouddn.com/static/images/static/images/qqpcap.png?imageView2/2/w/600">
 <p>典型的POST方法，其中有两个url参数。分别为g_tk和qzonetoken。以及一个url编码的表单数据，一目了然。</p>
 <p>重点便可放在构造请求url上。js一塌糊涂所以选择上网上找前人的经验。很幸运</p>
 <pre><code>hashes = 5381
@@ -459,7 +459,7 @@ except IOError:
               <a href="/archives/">
             
                 <span class="site-state-item-count">10</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
@@ -472,7 +472,7 @@ except IOError:
             <div class="site-state-item site-state-tags">
               
                 <span class="site-state-item-count">8</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-name">tags</span>
               
             </div>
           
@@ -523,7 +523,7 @@ except IOError:
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" href="https://hexo.io">Hexo</a></div>
 
   <span class="post-meta-divider">|</span>
 
