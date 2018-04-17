@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Sneeze">
 <meta property="og:description" content="一直都在探寻一个好用的 linux 远程桌面工具，期间用过vnc，那时候桌面环境用的是kde，有时候会出现远程和本机只能使用一个的尴尬现象。 现在实验室换了 deepin，体验还可以。不过这篇文章仅针对 Archlinux 上的 i3wm。 因为截至目前，deepin 桌面的 xrdp 配置好像还有些问题，等什么时候好了再说吧。 只说 i3wm， 因为今天发现 xrdp 配置 i3wm 非常容易。">
 <meta property="og:locale" content="chinese">
-<meta property="og:updated_time" content="2018-04-17T07:09:29.166Z">
+<meta property="og:updated_time" content="2018-04-17T07:12:25.540Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="xrdp 与 i3wm">
 <meta name="twitter:description" content="一直都在探寻一个好用的 linux 远程桌面工具，期间用过vnc，那时候桌面环境用的是kde，有时候会出现远程和本机只能使用一个的尴尬现象。 现在实验室换了 deepin，体验还可以。不过这篇文章仅针对 Archlinux 上的 i3wm。 因为截至目前，deepin 桌面的 xrdp 配置好像还有些问题，等什么时候好了再说吧。 只说 i3wm， 因为今天发现 xrdp 配置 i3wm 非常容易。">
@@ -360,7 +360,7 @@
 <pre><code>Add allowed_users=anybody to /etc/X11/Xwrapper.config to allow anybody to start X
 
 Edit ~/.xinitrc or /etc/X11/xinit/xinitrc to launch your DE
-</code></pre><p>一下两部执行完毕后，基本就很好用了，但是如果你用来 compton 合成管理器，便会发现 i3wm 的边框，包括你透明化的终端背景，一片火红。</p>
+</code></pre><p>以上两步执行完毕后，基本就很好用了，但是如果你用来 compton 合成管理器，便会发现 i3wm 的边框，包括你透明化的终端背景，一片火红。</p>
 <p>把 compton 关掉后显示便回复正常，当然透明特效也没了。没了合成管理器，可能还会出现屏幕撕裂。这只能期待 xrdp 上游开发者来解决。</p>
 <p>github 上已经有人提了 <a href="https://github.com/neutrinolabs/xrdp/issues/1090" target="_blank" rel="external">issue</a>， 并且提供了一个小的脚本。根据 X 程序显示位置来判断是否使用 compton，还是比较好用的。</p>
 <p>暂时关闭 compton 便可以愉快的使用 i3wm 了，效率很高，xrdp 也很方便。</p>
