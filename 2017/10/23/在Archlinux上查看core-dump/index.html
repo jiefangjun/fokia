@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="Sneeze">
 <meta property="og:description" content="今天在linux上写算法作业，矩阵连乘的最优解，看了很长一段时间了，勉强写的出来了，但还是有点不清晰，不得不承认是一只菜鸡。 这不是重点。之前在写的算法题用的都是纯c，一是开始只会用gcc编译，而是对c++没怎么接触过，有些望而生畏，包括c也是，能不用指针，就不用指针。 今天实在是受不了了，眼看着printf，scanf又臭又长，cout，cin又短又快，咬牙上吧，查了下资料，用g++编译链接即可">
 <meta property="og:locale" content="chinese">
-<meta property="og:updated_time" content="2017-10-23T16:27:22.071Z">
+<meta property="og:updated_time" content="2018-06-12T08:36:25.741Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在Archlinux上查看core dump">
 <meta name="twitter:description" content="今天在linux上写算法作业，矩阵连乘的最优解，看了很长一段时间了，勉强写的出来了，但还是有点不清晰，不得不承认是一只菜鸡。 这不是重点。之前在写的算法题用的都是纯c，一是开始只会用gcc编译，而是对c++没怎么接触过，有些望而生畏，包括c也是，能不用指针，就不用指针。 今天实在是受不了了，眼看着printf，scanf又臭又长，cout，cin又短又快，咬牙上吧，查了下资料，用g++编译链接即可">
@@ -369,6 +369,7 @@
 <p>#Examining a core dump<br>Use coredumpctl to find the corresponding dump:</p>
 <pre><code>coredumpctl list
 </code></pre><p>You need to uniquely identify the relevant dump. This is possible by specifying a PID, name of the executable, path to the executable or a journalctl predicate (see coredumpctl(1) and journalctl(1) for details). To see details of the core dumps:</p>
+<p>match 可以是 pid 也可以是可执行程序名</p>
 <pre><code>coredumpctl info match
 </code></pre><p>Pay attention to “Signal” row, that helps to identify crash cause. For deeper analysis you can examine the backtrace using gdb:</p>
 <pre><code>coredumpctl gdb match
