@@ -100,28 +100,28 @@
 
 
   
-  <meta name="keywords" content="汇编 Linux," />
+  <meta name="keywords" content="Python Linux," />
 
 
-<meta name="description" content="最近在跟着网上教程写内核，很累很疲惫，但也学到了许多。 且夫水之积也不厚 则其负大舟也无力 忽然想到这句话，很有道理，水平所限，好的教程是绝对写不出来的。仅以此篇作为记录之用。 代码实例1234567891011121314151617181920212223242526272829#include &amp;quot;common.h&amp;quot;/* * %1代表输入，%0代表输出，输出要加&amp;quot;">
-<meta name="keywords" content="汇编 Linux">
+<meta name="description" content="Python 写起来很快也很舒服，但是有一个非常致命的问题，也可能就是这个便捷带来的问题，那就是各版本库升级非常快，并且之后的版本不一定兼容上一代版本。 除了Python2 于 Python3 之间主体差别外，第三方库的问题更让人头疼。最最让人难受的是，如果你用的 Linux 系统，很多 Python 软件包你除了可以使用 Pip 安装外，还可以使用自带的包管理器来安装，并且当自带的包管理器在升级">
+<meta name="keywords" content="Python Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="内联汇编实例">
-<meta property="og:url" content="http://yoursite.com/2018/04/14/内联汇编实例/index.html">
+<meta property="og:title" content="开始使用Pipenv吧">
+<meta property="og:url" content="http://yoursite.com/2018/07/09/开始使用Pipenv吧/index.html">
 <meta property="og:site_name" content="Sneeze">
-<meta property="og:description" content="最近在跟着网上教程写内核，很累很疲惫，但也学到了许多。 且夫水之积也不厚 则其负大舟也无力 忽然想到这句话，很有道理，水平所限，好的教程是绝对写不出来的。仅以此篇作为记录之用。 代码实例1234567891011121314151617181920212223242526272829#include &amp;quot;common.h&amp;quot;/* * %1代表输入，%0代表输出，输出要加&amp;quot;">
+<meta property="og:description" content="Python 写起来很快也很舒服，但是有一个非常致命的问题，也可能就是这个便捷带来的问题，那就是各版本库升级非常快，并且之后的版本不一定兼容上一代版本。 除了Python2 于 Python3 之间主体差别外，第三方库的问题更让人头疼。最最让人难受的是，如果你用的 Linux 系统，很多 Python 软件包你除了可以使用 Pip 安装外，还可以使用自带的包管理器来安装，并且当自带的包管理器在升级">
 <meta property="og:locale" content="chinese">
-<meta property="og:updated_time" content="2018-04-15T13:00:18.676Z">
+<meta property="og:updated_time" content="2018-07-08T16:43:58.754Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="内联汇编实例">
-<meta name="twitter:description" content="最近在跟着网上教程写内核，很累很疲惫，但也学到了许多。 且夫水之积也不厚 则其负大舟也无力 忽然想到这句话，很有道理，水平所限，好的教程是绝对写不出来的。仅以此篇作为记录之用。 代码实例1234567891011121314151617181920212223242526272829#include &amp;quot;common.h&amp;quot;/* * %1代表输入，%0代表输出，输出要加&amp;quot;">
+<meta name="twitter:title" content="开始使用Pipenv吧">
+<meta name="twitter:description" content="Python 写起来很快也很舒服，但是有一个非常致命的问题，也可能就是这个便捷带来的问题，那就是各版本库升级非常快，并且之后的版本不一定兼容上一代版本。 除了Python2 于 Python3 之间主体差别外，第三方库的问题更让人头疼。最最让人难受的是，如果你用的 Linux 系统，很多 Python 软件包你除了可以使用 Pip 安装外，还可以使用自带的包管理器来安装，并且当自带的包管理器在升级">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/14/内联汇编实例/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/09/开始使用Pipenv吧/"/>
 
 
 
@@ -130,7 +130,7 @@
     sidebar: "",
   };
 </script>
-  <title>内联汇编实例 | Sneeze</title>
+  <title>开始使用Pipenv吧 | Sneeze</title>
   
 
 
@@ -265,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/14/内联汇编实例/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/09/开始使用Pipenv吧/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fokia">
@@ -282,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">内联汇编实例</h1>
+          <h1 class="post-title" itemprop="name headline">开始使用Pipenv吧</h1>
         
 
         <div class="post-meta">
@@ -294,7 +294,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-14T14:09:44+08:00">2018-04-14</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-09T00:05:07+08:00">2018-07-09</time>
             
 
             
@@ -312,8 +312,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/04/14/内联汇编实例/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/04/14/内联汇编实例/" itemprop="commentCount"></span>
+                <a href="/2018/07/09/开始使用Pipenv吧/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/09/开始使用Pipenv吧/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -321,7 +321,7 @@
 
           
           
-             <span id="/2018/04/14/内联汇编实例/" class="leancloud_visitors" data-flag-title="内联汇编实例">
+             <span id="/2018/07/09/开始使用Pipenv吧/" class="leancloud_visitors" data-flag-title="开始使用Pipenv吧">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -352,18 +352,29 @@
       
 
       
-        <p>最近在跟着网上教程写内核，很累很疲惫，但也学到了许多。</p>
-<pre><code>且夫水之积也不厚 则其负大舟也无力
-</code></pre><p>忽然想到这句话，很有道理，水平所限，好的教程是绝对写不出来的。仅以此篇作为记录之用。</p>
-<h3 id="代码实例"><a href="#代码实例" class="headerlink" title="代码实例"></a>代码实例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">#include &quot;common.h&quot;</div><div class="line"></div><div class="line">/*</div><div class="line"> * %1代表输入，%0代表输出，输出要加&quot;=&quot;号，a和dN代表寄存器约束</div><div class="line"> * 行与行直接：分隔开</div><div class="line"> * 最后一项代表 clobered register 即变动过的寄存器，需要GCC将其恢复原样</div><div class="line"> */</div><div class="line"></div><div class="line">//端口写一个字节</div><div class="line">inline void outb(uint16_t port, uint8_t value)</div><div class="line">&#123;</div><div class="line">	asm volatile(&quot;outb %1, %0&quot; : : &quot;dN&quot; (port), &quot;a&quot; (value));</div><div class="line">&#125;</div><div class="line"></div><div class="line">//端口读一个字节</div><div class="line">inline uint8_t inb(uint16_t port)</div><div class="line">&#123;</div><div class="line">	uint8_t ret;</div><div class="line">	asm volatile(&quot;inb %1, %0&quot; : &quot;=a&quot; (ret) : &quot;dN&quot; (port));</div><div class="line">	return ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//端口读入一个字</div><div class="line">inline uint16_t inw(uint16_t port)</div><div class="line">&#123;</div><div class="line">	uint16_t ret;</div><div class="line">	asm volatile(&quot;inw %1, %0&quot; : &quot;=a&quot; (ret) : &quot;dN&quot; (port));</div><div class="line">	return ret;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="inline-关键字"><a href="#inline-关键字" class="headerlink" title="inline 关键字"></a>inline 关键字</h3><p>其作用相当于宏定义，这么说不够严谨但很直观。</p>
-<p>要比宏定义高级的多。用来修饰函数，可以在编译时直接把函数嵌入调用的主体，节省重新开栈、返回的开销。</p>
-<p>当然你也可以通过宏定义一个函数，但是实在是想不到这样的用意在哪里，在我看来完全可以给函数起一个足够清晰的名称来省略这一步。</p>
-<p>而 inline 所修饰的函数，调用起来和常规函数并没有什么区别，而且效率更高，因为 inline 所修饰的函数，也可以被编译器进行类型检查。</p>
+        <p>Python 写起来很快也很舒服，但是有一个非常致命的问题，也可能就是这个便捷带来的问题，那就是各版本库升级非常快，并且之后的版本不一定兼容上一代版本。</p>
+<p>除了Python2 于 Python3 之间主体差别外，第三方库的问题更让人头疼。最最让人难受的是，如果你用的 Linux 系统，很多 Python 软件包你除了可以使用 Pip 安装外，还可以使用自带的包管理器来安装，并且当自带的包管理器在升级处理依赖的时候，只会检测到已经存在文件，不能自动处理，从而导致升级安装失败，非常难受。</p>
+<p>之前也有许多虚拟环境管理器，比如 Virtualenv 等，不过之前用的也少，也没太多痛点。碰到几次上边的问题后才痛下决心要尽可能的使用虚拟环境，系统库里要尽可能少的装包。</p>
+<p>网上看了下，现在大家都比较推荐 Pipenv ，这个库的作者和 Requests 库的作者是同一个人，不用多想，文档里一定会有 – Pipenv 最适合人类使用的依赖管理库……</p>
+<p>按照我个人理解，Pipenv 故名思意，除了具有虚拟环境管理的功能外还有 Pip包管理的功能，相当于两者合二为一了。</p>
+<p>先说安装，包管理器或者 pip 都可以，还是用 Pip 吧 ：）</p>
+<p><code>pip install pipenv</code></p>
+<p>创建虚拟环境</p>
+<p><code>pipenv --python 3.6</code> 创建指定的 Python 环境，也可以通过 <code>pipenv--two / three</code>来创建出自己系统上已经安装的 Python 虚拟环境。</p>
+<p>还可以通过 <code>pipenv install</code>来隐式的创建，Python 环境会是你系统默认环境，同时如果你这个目录里如果有 Pipfile （一个以安装库的描述文件）文件的话，他会默认来安装上所有的库，非常方便。</p>
+<p>再说删除，对应项目目录下执行</p>
+<p><code>pipenv --rm</code></p>
+<p>也可以通过执行 </p>
+<p><code>pipenv --venv</code> 查看虚拟环境的位置</p>
+<p>或是</p>
+<p><code>pipenv --where</code> 查看对应项目目录的信息</p>
+<p>通过</p>
+<p><code>pipenv shell</code> 可以进入虚拟环境子 shell ，exit便可以退出，异常方便。</p>
+<p>至于 Pipfile.lock 从官方文档来看，是一个对版本库的依赖描述，可能是我最近操作系统看多了，总觉的是一把锁……</p>
+<p>里面是一些库的信息，包括软件版本 hash 等等。</p>
+<p>只是一些最基本的使用，具体还要看官方文档</p>
 <p>参考链接：</p>
-<p><a href="https://www.ibm.com/developerworks/cn/linux/sdk/assemble/inline/index.html" target="_blank" rel="external">Linux 中 x86 的内联汇编</a></p>
-<p><a href="https://www.jianshu.com/p/1782e14a0766" target="_blank" rel="external">GCC内联汇编基础</a></p>
-<p><a href="http://huxiongwei.spaces.eepw.com.cn/articles/article/item/85841" target="_blank" rel="external">C语言里面的内联函数（inline）与宏定义（#define）探讨</a></p>
+<p><a href="https://docs.pipenv.org/" target="_blank" rel="external">Pipenv: Python Dev Workflow for Humans</a></p>
 
       
     </div>
@@ -384,7 +395,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/汇编-Linux/" rel="tag"># 汇编 Linux</a>
+            <a href="/tags/Python-Linux/" rel="tag"># Python Linux</a>
           
         </div>
       
@@ -397,8 +408,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/18/修复-xfce-icon-theme-显示/" rel="next" title="修复 xfce icon theme 显示">
-                <i class="fa fa-chevron-left"></i> 修复 xfce icon theme 显示
+              <a href="/2018/04/24/git-穿梭时间来-commit/" rel="next" title="Git 穿梭时间来 commit">
+                <i class="fa fa-chevron-left"></i> Git 穿梭时间来 commit
               </a>
             
           </div>
@@ -406,10 +417,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/15/gdb-warning-Selected-architecture-i386-is-not-compatible-with-reported-target-architecture-i386-x86-64/" rel="prev" title="gdb warning: Selected architecture i386 is not compatible with reported target architecture i386:x86-64">
-                gdb warning: Selected architecture i386 is not compatible with reported target architecture i386:x86-64 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -461,17 +468,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -555,22 +553,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实例"><span class="nav-number">1.</span> <span class="nav-text">代码实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inline-关键字"><span class="nav-number">2.</span> <span class="nav-text">inline 关键字</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
