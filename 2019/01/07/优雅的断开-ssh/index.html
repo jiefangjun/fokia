@@ -100,30 +100,28 @@
 
 
   
-  <meta name="keywords" content="test," />
+  <meta name="keywords" content="linux ssh," />
 
 
-<meta name="description" content="行行重行行行行重行行，与君生别离1。 相去万余里，各在天一涯2； 道路阻且长，会面安可知3？ 胡马依北风，越鸟巢南枝4。 相去日已远，衣带日已缓5； 浮云蔽白日，游子不顾反6。 思君令人老，岁月忽已晚7。 弃捐勿复道，努力加餐饭8！ before 青青河畔草 青青河畔草，郁郁园中柳9。 盈盈楼上女，皎皎当窗牖10。 娥娥红粉妆11，纤纤出素手。 昔为倡家女，今为荡子妇12。 荡子行不归，空床难独守">
-<meta name="keywords" content="test">
+<meta name="description" content="linux 上用的最多的远程工具一定是 ssh 莫属了，平时怎么断开呢？ Ctrl + D 一般情况下还可以~ 假如碰到种种问题，ssh 没有响应了呢，按什么都不好使。一般只能粗暴的退出终端，还要再点一下确认关闭，很是麻烦，以及 ugly ：） 正确做法 ~. 优雅又通用，无论是在什么情况下，都可以轻松退出。">
+<meta name="keywords" content="linux ssh">
 <meta property="og:type" content="article">
-<meta property="og:title" content="core &amp; ks">
-<meta property="og:url" content="http://yoursite.com/2018/12/11/core-ks/index.html">
+<meta property="og:title" content="优雅的断开 ssh">
+<meta property="og:url" content="http://yoursite.com/2019/01/07/优雅的断开-ssh/index.html">
 <meta property="og:site_name" content="Sneeze">
-<meta property="og:description" content="行行重行行行行重行行，与君生别离1。 相去万余里，各在天一涯2； 道路阻且长，会面安可知3？ 胡马依北风，越鸟巢南枝4。 相去日已远，衣带日已缓5； 浮云蔽白日，游子不顾反6。 思君令人老，岁月忽已晚7。 弃捐勿复道，努力加餐饭8！ before 青青河畔草 青青河畔草，郁郁园中柳9。 盈盈楼上女，皎皎当窗牖10。 娥娥红粉妆11，纤纤出素手。 昔为倡家女，今为荡子妇12。 荡子行不归，空床难独守">
+<meta property="og:description" content="linux 上用的最多的远程工具一定是 ssh 莫属了，平时怎么断开呢？ Ctrl + D 一般情况下还可以~ 假如碰到种种问题，ssh 没有响应了呢，按什么都不好使。一般只能粗暴的退出终端，还要再点一下确认关闭，很是麻烦，以及 ugly ：） 正确做法 ~. 优雅又通用，无论是在什么情况下，都可以轻松退出。">
 <meta property="og:locale" content="chinese">
-<meta property="og:image" content="http://yoursite.com/home/archie/Pictures/kn-icon.png">
-<meta property="og:updated_time" content="2018-12-11T08:06:16.128Z">
+<meta property="og:updated_time" content="2019-01-07T09:03:45.772Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="core &amp; ks">
-<meta name="twitter:description" content="行行重行行行行重行行，与君生别离1。 相去万余里，各在天一涯2； 道路阻且长，会面安可知3？ 胡马依北风，越鸟巢南枝4。 相去日已远，衣带日已缓5； 浮云蔽白日，游子不顾反6。 思君令人老，岁月忽已晚7。 弃捐勿复道，努力加餐饭8！ before 青青河畔草 青青河畔草，郁郁园中柳9。 盈盈楼上女，皎皎当窗牖10。 娥娥红粉妆11，纤纤出素手。 昔为倡家女，今为荡子妇12。 荡子行不归，空床难独守">
-<meta name="twitter:image" content="http://yoursite.com/home/archie/Pictures/kn-icon.png">
+<meta name="twitter:title" content="优雅的断开 ssh">
+<meta name="twitter:description" content="linux 上用的最多的远程工具一定是 ssh 莫属了，平时怎么断开呢？ Ctrl + D 一般情况下还可以~ 假如碰到种种问题，ssh 没有响应了呢，按什么都不好使。一般只能粗暴的退出终端，还要再点一下确认关闭，很是麻烦，以及 ugly ：） 正确做法 ~. 优雅又通用，无论是在什么情况下，都可以轻松退出。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/11/core-ks/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/01/07/优雅的断开-ssh/"/>
 
 
 
@@ -132,7 +130,7 @@
     sidebar: "",
   };
 </script>
-  <title>core & ks | Sneeze</title>
+  <title>优雅的断开 ssh | Sneeze</title>
   
 
 
@@ -267,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/11/core-ks/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/07/优雅的断开-ssh/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="fokia">
@@ -284,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">core & ks</h1>
+          <h1 class="post-title" itemprop="name headline">优雅的断开 ssh</h1>
         
 
         <div class="post-meta">
@@ -296,7 +294,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-11T10:48:09+08:00">2018-12-11</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-07T16:57:49+08:00">2019-01-07</time>
             
 
             
@@ -314,8 +312,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/12/11/core-ks/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/11/core-ks/" itemprop="commentCount"></span>
+                <a href="/2019/01/07/优雅的断开-ssh/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/07/优雅的断开-ssh/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -323,7 +321,7 @@
 
           
           
-             <span id="/2018/12/11/core-ks/" class="leancloud_visitors" data-flag-title="core & ks">
+             <span id="/2019/01/07/优雅的断开-ssh/" class="leancloud_visitors" data-flag-title="优雅的断开 ssh">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -354,28 +352,13 @@
       
 
       
-        <h2 id="行行重行行"><a href="#行行重行行" class="headerlink" title="行行重行行"></a>行行重行行</h2><p>行行重行行，与君生别离1。</p>
-<p>相去万余里，各在天一涯2；</p>
-<p>道路阻且长，会面安可知3？</p>
-<p>胡马依北风，越鸟巢南枝4。</p>
-<p>相去日已远，衣带日已缓5；</p>
-<p>浮云蔽白日，游子不顾反6。</p>
-<p>思君令人老，岁月忽已晚7。</p>
-<p>弃捐勿复道，努力加餐饭8！</p>
-<p>before</p>
-<p>青青河畔草</p>
-<p>青青河畔草，郁郁园中柳9。</p>
-<p>盈盈楼上女，皎皎当窗牖10。</p>
-<p>娥娥红粉妆11，纤纤出素手。</p>
-<p>昔为倡家女，今为荡子妇12。</p>
-<p>荡子行不归，空床难独守。</p>
-<p>after</p>
-<p>青青陵上柏<br>青青陵上柏，磊磊涧中石13。<br>人生天地间，忽如远行客14。<br>斗酒相娱乐，聊厚不为薄15。<br>驱车策驽马，游戏宛与洛16。<br>洛中何郁郁，冠带自相索17。<br>长衢罗夹巷，王侯多第宅18。<br>两宫遥相望，双阙百余尺19。<br>极宴娱心意，戚戚何所迫20。</p>
-<p>~~~</p>
-<p>今日良宴会<br>今日良宴会，欢乐难具陈21。<br>弹筝奋逸响，新声妙入神22。<br>令德唱高言，识曲听其真23。<br>齐心同所愿，含意俱未申24。<br>人生寄一世，奄忽若飙尘25。<br>何不策高足，先据要路津26。<br>无为守穷贱，轗轲长苦辛27。</p>
-<hr>
-<p>西北有高楼<br>西北有高楼，上与浮云齐。<br>交疏结绮窗，阿阁三重阶28。<br>上有弦歌声，音响一何悲29！<br>谁能为此曲，无乃杞梁妻30。<br>清商随风发，中曲正徘徊31。<br>一弹再三叹，慷慨有余哀32。<br>不惜歌者苦，但伤知音稀33。<br>愿为双鸿鹄34，奋翅起高飞。</p>
-<p><img src="/home/archie/Pictures/kn-icon.png" alt="newbee"></p>
+        <p>linux 上用的最多的远程工具一定是 ssh 莫属了，平时怎么断开呢？</p>
+<p>Ctrl + D</p>
+<p>一般情况下还可以~</p>
+<p>假如碰到种种问题，ssh 没有响应了呢，按什么都不好使。一般只能粗暴的退出终端，还要再点一下确认关闭，很是麻烦，以及 ugly ：）</p>
+<p>正确做法</p>
+<p><code>~.</code></p>
+<p>优雅又通用，无论是在什么情况下，都可以轻松退出。</p>
 
       
     </div>
@@ -396,7 +379,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/test/" rel="tag"># test</a>
+            <a href="/tags/linux-ssh/" rel="tag"># linux ssh</a>
           
         </div>
       
@@ -409,8 +392,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/24/新的生活/" rel="next" title="新的生活">
-                <i class="fa fa-chevron-left"></i> 新的生活
+              <a href="/2018/12/11/core-ks/" rel="next" title="core & ks">
+                <i class="fa fa-chevron-left"></i> core & ks
               </a>
             
           </div>
@@ -418,10 +401,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/07/优雅的断开-ssh/" rel="prev" title="优雅的断开 ssh">
-                优雅的断开 ssh <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -473,17 +452,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -573,22 +543,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#行行重行行"><span class="nav-number">1.</span> <span class="nav-text">行行重行行</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
